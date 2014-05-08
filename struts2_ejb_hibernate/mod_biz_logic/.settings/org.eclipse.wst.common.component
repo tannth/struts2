@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="mod_biz_logic">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/mod_biz_logic/build/classes"/>
+        <property name="ClientProject" value="mod_biz_logicClient"/>
+        <property name="ClientJARURI" value="mod_biz_logicClient.jar"/>
+    </wb-module>
+</project-modules>

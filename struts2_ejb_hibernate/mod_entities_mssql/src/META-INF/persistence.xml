@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="manager1">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/MantechHelpdeskDS</jta-data-source>
+
+		<class>model.Account</class>
+		<class>model.Accountrole</class>
+		<class>model.Employee</class>
+		<class>model.Article</class>
+		<class>model.Articlerate</class>
+		<class>model.Complaint</class>
+		<class>model.Complaintcategory</class>
+		<class>model.Complaintreply</class>
+		<class>model.Department</class>
+		<class>model.Job</class>
+		<class>model.Paramater</class>
+		<class>model.Role</class>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>

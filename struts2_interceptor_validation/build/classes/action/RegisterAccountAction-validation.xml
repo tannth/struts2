@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE validators PUBLIC 
+  		"-//Apache Struts//XWork Validator 1.0.2//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<field name="username">
+		<field-validator type="requiredstring">
+			<message key="username.required" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">30</param>
+			<param name="minLength">6</param>
+			<message key="username.length" />
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message key="password.required" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">20</param>
+			<param name="minLength ">6</param>
+			<message key="password.length" />
+		</field-validator>
+	</field>
+	<field name="confirm">
+		<field-validator type="fieldexpression">
+			<param name="expression">confirm==password</param>
+			<message key="confirm.matching" />
+		</field-validator>
+
+	</field>
+	<field name="lastname">
+		<field-validator type="requiredstring">
+			<message key="lastname.required" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">50</param>
+			<param name="minLength ">6</param>
+			<message key="lastname.length" />
+		</field-validator>
+	</field>
+
+	<field name="emailID">
+		<field-validator type="requiredstring">
+			<message key="emailID.required" />
+		</field-validator>
+		<field-validator type="email">
+			<message key="emailID.invalid" />
+		</field-validator>
+	</field>
+	<field name="phoneNo">
+		<field-validator type="regex">
+			<param name="expression">d(8)</param>
+			<message key="phoneNo.invalid" />
+		</field-validator>
+
+	</field>
+</validators>

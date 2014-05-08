@@ -1,0 +1,41 @@
+--cofig DS
+http://www.thejavageek.com/2013/09/18/configure-jaas-jboss-7-1-mysql/
+http://blog.amatya.net/2012/09/implementing-security-with-jaas-on.html
+http://middlewaremagic.com/jboss/?p=387
+http://www.thejavageek.com/2013/09/18/configure-jaas-jboss-7-1-mysql/
+https://docs.jboss.org/author/display/AS72/EJB+invocations+from+a+remote+client+using+JNDI
+
+-- abstract factory + DAO
+http://www.oracle.com/technetwork/java/dataaccessobject-138824.html
+
+--named query
+http://www.objectdb.com/java/jpa/query/named
+
+
+---------------------struts2
+http://www.dineshonjava.com/2013/08/struts2-integration-with-tiles2-spring3.html#.UzLgfULPDVw
+--interceptor
+http://struts.apache.org/release/2.3.x/docs/writing-interceptors.html
+http://www.journaldev.com/2210/struts-2-interceptor-tutorial-with-custom-authentication-interceptor-example
+
+--validation
+http://struts.apache.org/release/2.3.x/docs/validation.html
+	The effect of having common validators on both
+
+	<actionClass>-validation.xml
+	<actionClass>-<actionAlias>-validation.xml
+	
+--package
+http://struts.apache.org/development/2.x/docs/package-configuration.html
+http://stackoverflow.com/questions/9948858/multiple-struts-2-configuration-files
+--security
+http://java.dzone.com/articles/understanding-web-security
+http://stackoverflow.com/questions/11972892/block-direct-access-to-jsp-and-action-in-struts2
+
+--mutil cofig
+http://stackoverflow.com/questions/9948858/multiple-struts-2-configuration-files
+--
+-----------fix error
+---error both two projects using only a jboss-client.jar
+https://community.jboss.org/message/838208
+

@@ -1,0 +1,14 @@
+/* form .errorMessage {
+font-weight: bold;
+color: red;
+padding: 0px 5px 5px 0px;
+}
+form input.error {
+background-color: #F9E5E6;
+border-color: #B50007;
+} */
+#buttonsCustom div.addbutton a span {
+	background-image: url("../../images/flexigrid/add.png");
+	background-repeat: no-repeat;
+}
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- constant to define result path locations to project root directory -->
+	<constant name="struts.convention.result.path" value="/"></constant>
+
+	<!-- constant to define global resource bundle -->
+	<constant name="struts.custom.i18n.resources" value="global"></constant>
+
+	<!-- constant to define extension -->
+	<constant name="struts.action.extension" value="html" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<interceptors>
+			<interceptor name="authenticationInterceptor" class="interceptor.AuthenticationInterceptor" />
+			<interceptor-stack name="secureStack">
+				<interceptor-ref name="authenticationInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="secureStack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="login" type="tiles">index</result>
+		</global-results>
+		
+		<action name="loadHomePage">
+			<result name="success" type="tiles">index</result>
+		</action>
+
+		<!-- <action name="*-page" method="{1}" class="actions.util.LinkAction"> 
+			<interceptor-ref name="params" /> <interceptor-ref name="getListEmployee" 
+			/> <result name="employee" type="tiles">employee</result> </action> -->
+	</package>
+
+	<package name="account" namespace="/" extends="struts-default,default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="login" class="actions.account.AccountAction"
+			method="login">
+			<interceptor-ref name="params" />
+			<interceptor-ref name="validation" />
+			<interceptor-ref name="workflow" />
+			<result name="success" type="tiles">welcome</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+
+
+		<action name="logout" class="actions.account.AccountAction"
+			method="logout">
+			<result name="success" type="tiles">index</result>
+		</action>
+	</package>
+
+	<package name="employee" namespace="/" extends="struts-default, default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="employee-page" class="actions.employee.EmployeeAction"
+			method="displayAll">
+			<result name="displayAll" type="tiles">employee</result>
+		</action>
+	</package>
+
+</struts>

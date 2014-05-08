@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: mod_biz_logicClient.jar
+

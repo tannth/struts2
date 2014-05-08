@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+  
+<!DOCTYPE tiles-definitions PUBLIC   
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+ "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/common/baselayout.jsp">
+		<put-attribute name="myScript" value="/WEB-INF/common/script.jsp" />
+		<put-attribute name="myFooter" value="/WEB-INF/common/footer.jsp" />
+		<put-attribute name="myHeader" value="/WEB-INF/common/header.jsp" />
+		<put-attribute name="myMenu" value="" />
+	</definition>
+
+
+	<definition name="index" extends="baseLayout">
+		<put-attribute name="myTitle" value="Welcome Page" />
+		<put-attribute name="myNavTop" value="/WEB-INF/common/nav_login.jsp" />
+		<put-attribute name="myBody" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+
+	<definition name="welcome" extends="baseLayout">
+		<put-attribute name="myTitle" value="Admin Page" />
+		<put-attribute name="myNavTop" value="/WEB-INF/common/nav_welcome.jsp" />
+		<put-attribute name="myBody" value="/WEB-INF/pages/welcome.jsp" />
+		<put-attribute name="myMenu" value="/WEB-INF/common/menu.jsp" />
+	</definition>
+
+</tiles-definitions>  

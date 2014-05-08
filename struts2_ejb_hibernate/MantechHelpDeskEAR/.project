@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MantechHelpDeskEAR</name>
+	<comment></comment>
+	<projects>
+		<project>mod_biz_logic</project>
+		<project>mod_common</project>
+		<project>mod_be</project>
+		<project>mod_biz_api</project>
+		<project>mod_entities</project>
+		<project>mod_entities_mssql</project>
+		<project>mod_fe</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
+	</natures>
+</projectDescription>
